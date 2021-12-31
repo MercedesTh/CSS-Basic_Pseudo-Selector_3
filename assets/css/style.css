@@ -1,0 +1,60 @@
+/* Aufgabenstellung
+
+Wende bitte folgendes an:
+Ändere die Schriftgröße des Titels auf "1.5em"
+Entferne die Border für die Tabelle
+Zentriere alle <th> und <td> 
+Wähle das zweite <th>-Tag der ersten <tr> aus (es enthält den Monat) und ändere die Größe auf "2em" und die Farbe auf blau
+Gib den <tr>, die an einer geraden Position sind, die Hintergrundfarbe #FCB941 und allen <tr> an ungerader Position #F1654C als Hintergrundfarbe
+Gib der ersten Zelle jeder Zeile an einer ungeraden Position die Hintergrundfarbe "#7E3661" und die Schriftfarbe "#fff"
+Gib der ersten Zelle jeder Zeile an einer geraden Position die Hintergrundfarbe "#888888" und die Schriftfarbe "#fff" an 
+Gib der letzten Zelle jeder Zeile in ungerader Position den Hintergrund "#8870FF" und die Schriftfarbe "#fff"
+Entferne mit Hilfe von CSS den border-right und den border-top von der letzten "th"-Zelle mit dem Attribut "rowspan" (z.B.: border-right: none). */
+
+
+ 
+
+caption{
+    font-size: 1.5em;
+}
+
+table{
+    border: none;
+}
+
+/* th, td{
+    text-align: center;
+} */
+
+tr:first-of-type th:nth-of-type(2){
+    font-size: 2em;
+    color: #8870FF;
+}
+
+tr td:nth-of-type(even){
+    background: #FCB941;
+}
+
+tr td:nth-of-type(odd){
+    background: #F1654C;
+}
+
+tr:nth-of-type(odd) td:first-of-type{
+    background: #7E3661;
+    color: #fff;
+}
+
+tr:nth-of-type(even) td:first-of-type{
+    background: #888888;
+    color: #fff;
+}
+
+tr:nth-of-type(odd) td:last-of-type{
+    background: #8870FF;
+    color: #fff;
+}
+
+th[rowspan]:last-of-type{
+    border-right: none;
+    border-top: none;
+}
